@@ -49,6 +49,25 @@ class $modify(MyLevelSearchLayer, LevelSearchLayer) {
 
         if (isNumericOnly(query)) {
 
+            int parsedID;
+
+            if (Mod::get()->getSettingValue<bool>("force-account-search")) {
+
+                if (!parseSafeInt32(query, parsedID)) {
+                    FLAlertLayer::create(
+                        this,
+                        "Invalid ID",
+                        "Number is too large",
+                        "OK",
+                        nullptr
+                    )->show();
+                    return;
+                }
+
+                ProfilePage::create(parsedID, false)->show();
+                return;
+            }
+
             m_fields->waitingChoice = true;
             m_fields->lastSender = sender;
 
@@ -80,8 +99,8 @@ class $modify(MyLevelSearchLayer, LevelSearchLayer) {
                 this,
                 "Invalid ID",
                 "Number is too large",
-                "Cancel",
-                "OK"
+                "OK",
+                nullptr
             )->show();
             return;
         }
