@@ -1,3 +1,13 @@
+# 1.0.2
+
+- Added setting to always search by Account ID (skips search type selection popup)
+- Removed unnecessary Cancel button from "Number is too large" alert
+
+# 1.0.1
+
+- Temporarily removed Android support
+- Platform metadata fix
+
 # 1.0.0
 
 - Initial release
