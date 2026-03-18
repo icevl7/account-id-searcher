@@ -1,3 +1,7 @@
+# 1.0.3
+
+- Added Android ARM64 support
+
 # 1.0.2
 
 - Added setting to always search by Account ID (skips search type selection popup)
