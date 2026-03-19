@@ -1,3 +1,7 @@
+# 1.0.4
+
+- Adapted mod for Geometry Dash search, handling cases with spaces at the beginning or end of input.
+
 # 1.0.3
 
 - Added Android ARM64 support
