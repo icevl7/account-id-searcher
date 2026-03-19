@@ -3,14 +3,37 @@
 #include <Geode/binding/ProfilePage.hpp>
 #include <cctype>
 #include <climits>
+#include <string>
+#include <string_view>
+#include <algorithm>
 
 using namespace geode::prelude;
 
 bool isNumericOnly(const std::string& s) {
     if (s.empty()) return false;
-    for (char c : s)
-        if (!std::isdigit((unsigned char)c))
+
+    for (char c : s) {
+        if (!std::isdigit(static_cast<unsigned char>(c))) {
+            
+            std::string_view sv = s;
+
+            size_t first = sv.find_first_not_of(' ');
+            
+            if (first == std::string_view::npos) return false;
+
+            size_t last = sv.find_last_not_of(' ');
+            std::string_view trimmed = sv.substr(first, last - first + 1);
+
+            if (std::ranges::all_of(trimmed, [](unsigned char ch) { 
+                return std::isdigit(ch); 
+            })) {
+                return true;
+            }
+
             return false;
+        }
+    }
+
     return true;
 }
 
