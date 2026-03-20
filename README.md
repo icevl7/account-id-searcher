@@ -27,16 +27,3 @@ You can enable the **Always search by Account ID** setting to skip the selection
 If an account with the specified Account ID does not exist, a dash will be shown in the results.
 
 
-## Build
-
-### Debug build
-
-```sh
-geode build
-```
-
-### Release build
-
-```sh
-geode build --config Release
-```
