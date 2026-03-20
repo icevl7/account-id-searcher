@@ -1,3 +1,10 @@
+# 1.0.5
+
+- Reworked numeric ID parsing logic using Geode utilities
+- Replaced exception-based parsing with Geode Result-based parsing
+- Restored full platform support for CI builds
+- Minor code cleanup
+
 # 1.0.4
 
 - Adapted mod for Geometry Dash search, handling cases with spaces at the beginning or end of input.
@@ -21,5 +28,4 @@
 - Initial release
 - Added profile search by Account ID
 - Added numeric search detection with search type selection
-- Added instant profile opening when searching by User ID
 - Added safe ID validation to prevent crashes with large numbers
