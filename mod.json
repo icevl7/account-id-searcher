@@ -8,7 +8,7 @@
   },
   "id": "icevl.account_id_searcher",
   "name": "Account ID Searcher",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "developer": "icevl",
   "description": "Adds Account ID search to the profile search.",
   "repository": "https://github.com/icevl7/account-id-searcher",
