@@ -1,3 +1,7 @@
+# 1.0.6
+
+- Added MacOS x86-64 support
+
 # 1.0.5
 
 - Reworked numeric ID parsing logic using Geode utilities
