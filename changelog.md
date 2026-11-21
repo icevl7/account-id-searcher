@@ -1,3 +1,7 @@
+# 1.0.7
+
+- Adapted mod for Geometry Dash 2.2091
+
 # 1.0.6
 
 - Added MacOS x86-64 support
